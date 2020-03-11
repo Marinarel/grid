@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	.wrapper{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; /*recomended usage of fr units*/
+	/*grid-template-columns: repeat(3, 1fr);*/
+	grid-gap: 1em;
+	/*grid-auto-rows: 100px;*/
+	grid-auto-rows: minmax(100px, auto);
+}
+.nested {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 70px;
+	grid-gap: 1em;
+}
+		.wrapper > div{
+	background: #eee;
+	padding: 1em;
+}
+.wrapper > div:nth-child(odd){
+	background: #ddd;
+}
+.nested > div {
+	border: #333 1px solid;
+	padding: 1em;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae magna mollis, consectetur lorem sit amet, egestas elit. Pellentesque iaculis nibh risus, vitae facilisis risus dapibus sit amet. Donec eget lectus dictum, varius diam eget, vulputate tortor. Duis ornare ut urna at egestas. Vestibulum lectus ex, mollis ac magna ut, faucibus facilisis orci. Donec efficitur dui non dui sagittis, at rhoncus odio fermentum. Quisque sit amet ante nec ex vehicula mattis in vitae nulla. </div>
+		<div class="nested">
+			<div>Lorem ipsum</div>
+			<div>Lorem ipsum</div>
+			<div>Lorem ipsum</div>
+		</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		
+	</div>
+
+</body>
+</html>
